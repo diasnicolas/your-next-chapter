@@ -27,7 +27,7 @@ const Hero = () => {
           alt="Destino de viagem luxuoso"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
       </div>
 
       {/* Content */}
@@ -42,23 +42,23 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="label-elegant text-primary-foreground/80 mb-6"
+            className="label-elegant text-white/80 mb-6"
           >
             Travel Designer
           </motion.p>
 
-          <h1 className="heading-display text-primary-foreground mb-8 text-balance">
-            Viagens planejadas com a mesma atenção que você dá aos momentos mais importantes da sua vida
+          <h1 className="heading-display text-white mb-8 text-balance">
+            Viagens internacionais sob medida, no seu ritmo e no seu jeito de viajar.
           </h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="body-large text-primary-foreground/85 max-w-2xl mx-auto mb-12"
+            className="body-large text-white/85 max-w-2xl mx-auto mb-12"
           >
-            Não vendemos pacotes. Criamos experiências sob medida para quem valoriza
-            tempo, conforto e o prazer de viajar sem preocupações.
+            Planejamento profissional para quem busca conforto, clareza e experiências 
+            autênticas — sem pacotes prontos, sem grupos e sem improvisos.
           </motion.p>
 
           <motion.div
@@ -68,10 +68,10 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button variant="hero" size="xl" onClick={scrollToContact}>
-              Agendar Diagnóstico
+              Agendar reunião de diagnóstico
             </Button>
             <Button variant="hero-outline" size="xl" onClick={scrollToMethod}>
-              Entenda o Método
+              Veja como funciona
             </Button>
           </motion.div>
         </motion.div>
@@ -83,7 +83,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
         onClick={scrollToMethod}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors"
         aria-label="Scroll para baixo"
       >
         <motion.div

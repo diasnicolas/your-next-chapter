@@ -10,14 +10,14 @@ const Contact = () => {
 
   const whatsappNumber = "5511999999999"; // Substituir pelo número real
   const whatsappMessage = encodeURIComponent(
-    "Olá, Larissa! Gostaria de saber mais sobre seus serviços de Travel Design."
+    "Olá, Larissa! Gostaria de agendar uma reunião de diagnóstico de viagem."
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
     <section
       id="contato"
-      className="py-24 md:py-32 bg-forest text-primary-foreground"
+      className="py-24 md:py-32 bg-primary text-primary-foreground"
       ref={ref}
     >
       <div className="container">
@@ -27,14 +27,17 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <p className="label-elegant text-gold mb-4">Próximo Passo</p>
+          <p className="label-elegant text-secondary mb-4">Próximo Passo</p>
           <h2 className="heading-section mb-6">
-            Vamos conversar sobre sua viagem?
+            Vamos conversar sobre a sua viagem?
           </h2>
-          <p className="body-large text-primary-foreground/80 mb-10">
-            O primeiro passo é uma conversa sem compromisso pelo WhatsApp. 
-            Vou entender o contexto da sua viagem e explicar como funciona 
-            a reunião de diagnóstico.
+          <p className="body-large text-primary-foreground/85 mb-6">
+            Se você busca uma viagem bem planejada, no seu ritmo e com decisões 
+            conscientes, o próximo passo é simples.
+          </p>
+          <p className="text-primary-foreground/80 mb-10">
+            Agende sua reunião de diagnóstico e vamos entender, juntos, se esse 
+            método faz sentido para você.
           </p>
 
           <motion.div
@@ -54,7 +57,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
               >
                 <MessageCircle className="w-5 h-5" />
-                Iniciar Conversa no WhatsApp
+                Agendar reunião de diagnóstico
               </a>
             </Button>
           </motion.div>

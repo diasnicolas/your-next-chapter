@@ -4,9 +4,10 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { label: "Como Funciona", href: "#metodo" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Inspirações", href: "#destinos" },
+  { label: "Como Funciona", href: "#metodo" },
+  { label: "Diagnóstico", href: "#diagnostico" },
+  { label: "Destinos", href: "#destinos" },
 ];
 
 const Header = () => {
@@ -44,7 +45,9 @@ const Header = () => {
         <div className="container flex items-center justify-between">
           <a
             href="#"
-            className="font-serif text-2xl md:text-3xl tracking-tight text-foreground"
+            className={`font-serif text-xl md:text-2xl tracking-tight transition-colors ${
+              isScrolled ? "text-primary" : "text-white"
+            }`}
           >
             Larissa Kassner
           </a>
@@ -55,13 +58,17 @@ const Header = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors link-underline"
+                className={`text-sm tracking-wide transition-colors link-underline ${
+                  isScrolled
+                    ? "text-muted-foreground hover:text-foreground"
+                    : "text-white/80 hover:text-white"
+                }`}
               >
                 {item.label}
               </button>
             ))}
             <Button
-              variant="premium"
+              variant={isScrolled ? "premium" : "hero"}
               size="lg"
               onClick={() => scrollToSection("#contato")}
             >
@@ -71,7 +78,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
