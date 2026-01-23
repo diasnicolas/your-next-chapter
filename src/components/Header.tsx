@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoMonogram from "@/assets/logo-monogram.jpg";
 
 const navItems = [
   { label: "Sobre", href: "#sobre" },
@@ -43,13 +44,12 @@ const Header = () => {
         }`}
       >
         <div className="container flex items-center justify-between">
-          <a
-            href="#"
-            className={`font-serif text-xl md:text-2xl tracking-tight transition-colors ${
-              isScrolled ? "text-primary" : "text-white"
-            }`}
-          >
-            Larissa Kassner
+          <a href="#" className="flex items-center">
+            <img 
+              src={logoMonogram} 
+              alt="Larissa Kassner - Travel Designer" 
+              className="h-12 md:h-14 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
