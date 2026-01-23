@@ -1,4 +1,5 @@
 import { Instagram, Mail } from "lucide-react";
+import logoFull from "@/assets/logo-full.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
-            <p className="font-serif text-xl text-primary mb-2">
-              Larissa Kassner
-            </p>
+            <img 
+              src={logoFull} 
+              alt="Larissa Kassner - Travel Designer" 
+              className="h-20 w-auto mb-4"
+            />
             <p className="text-sm text-muted-foreground">
-              Travel Designer
-            </p>
-            <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Todos os direitos reservados
             </p>
           </div>

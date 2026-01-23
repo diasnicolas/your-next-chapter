@@ -1,29 +1,87 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import larissaPortrait from "@/assets/larissa-portrait.jpg";
+import heroTravel from "@/assets/hero-travel.jpg";
+import destinationItaly from "@/assets/destination-italy.jpg";
+import destinationMaldives from "@/assets/destination-maldives.jpg";
+
+const images = [
+  { src: larissaPortrait, alt: "Larissa Kassner - Travel Designer" },
+  { src: heroTravel, alt: "Paisagem de viagem" },
+  { src: destinationItaly, alt: "Itália" },
+  { src: destinationMaldives, alt: "Maldivas" },
+];
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   return (
     <section id="sobre" className="py-24 md:py-32 bg-muted/30" ref={ref}>
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
-          {/* Image */}
+          {/* Image Carousel */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-lg overflow-hidden">
-              <img
-                src={larissaPortrait}
-                alt="Larissa Kassner - Travel Designer"
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-[4/5] rounded-lg overflow-hidden relative group">
+              {images.map((image, index) => (
+                <motion.img
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: index === currentImage ? 1 : 0 }}
+                  transition={{ duration: 0.5 }}
+                />
+              ))}
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevImage}
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Foto anterior"
+              >
+                <ChevronLeft className="w-5 h-5 text-foreground" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Próxima foto"
+              >
+                <ChevronRight className="w-5 h-5 text-foreground" />
+              </button>
+              
+              {/* Dots Indicator */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImage(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentImage 
+                        ? "bg-primary w-4" 
+                        : "bg-background/60 hover:bg-background"
+                    }`}
+                    aria-label={`Ver foto ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/40 rounded-lg -z-10" />
