@@ -1,51 +1,42 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Video, FileText, Plane } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MessageCircle, FileSearch, FileText, Plane } from "lucide-react";
 
 const steps = [
   {
     number: "01",
     icon: MessageCircle,
-    title: "Primeiro Contato",
+    title: "Diagnóstico de Viagem",
     description:
-      "Você entra em contato pelo WhatsApp. Conversamos brevemente para entender o contexto da sua viagem e verificar se faz sentido seguirmos juntos.",
+      "Uma conversa estratégica para entender seu perfil, expectativas, estilo de viagem e complexidade do planejamento.",
   },
   {
     number: "02",
-    icon: Video,
-    title: "Reunião de Diagnóstico",
+    icon: FileSearch,
+    title: "Projeto Sob Medida",
     description:
-      "Uma conversa aprofundada onde mapeio seu perfil, preferências, datas e expectativas. É aqui que entendo a complexidade do projeto para apresentar o investimento.",
-    highlight: true,
+      "Com base no diagnóstico, desenvolvo um roteiro personalizado, lógico e fluido — ajustado ao seu ritmo e às suas prioridades.",
   },
   {
     number: "03",
     icon: FileText,
-    title: "Proposta Sob Medida",
+    title: "Ajustes e Finalização",
     description:
-      "Com base no diagnóstico, apresento uma proposta personalizada com o valor do projeto. Você decide se quer seguir em frente.",
+      "O roteiro passa por versões de refinamento até ficar exatamente alinhado ao que você busca viver.",
   },
   {
     number: "04",
     icon: Plane,
-    title: "Planejamento & Execução",
+    title: "Apoio Estratégico",
     description:
-      "Cuido de cada detalhe: roteiro, hospedagens, experiências, reservas, transfers. Você recebe um dossiê completo e suporte durante toda a viagem.",
+      "Conforme o perfil do projeto, ofereço orientações pré-embarque e suporte antes da viagem para garantir tranquilidade.",
   },
 ];
 
 const Method = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const scrollToContact = () => {
-    const element = document.querySelector("#contato");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="metodo" className="py-24 md:py-32 bg-background" ref={ref}>
@@ -56,9 +47,9 @@ const Method = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <p className="label-elegant text-accent mb-4">O Método</p>
+          <p className="label-elegant text-primary mb-4">O Método</p>
           <h2 className="heading-section text-foreground mb-6">
-            Como funciona o processo
+            Um método claro, pensado para viagens reais.
           </h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto">
             Cada viagem é um projeto único. O primeiro passo é sempre uma
@@ -80,43 +71,32 @@ const Method = () => {
               {/* Step Number & Icon */}
               <div
                 className={`absolute -left-6 md:-left-8 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center ${
-                  step.highlight
-                    ? "bg-forest text-primary-foreground"
-                    : "bg-sand text-foreground"
+                  index === 0
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-rosa-soft text-primary"
                 }`}
               >
                 <step.icon className="w-5 h-5 md:w-6 md:h-6" />
               </div>
 
               {/* Content */}
-              <div className={`flex-1 ${step.highlight ? "bg-muted/50 -ml-4 p-6 rounded-lg" : ""}`}>
-                <p className="label-elegant text-accent mb-2">{step.number}</p>
+              <div className={`flex-1 ${index === 0 ? "bg-rosa-soft/50 -ml-4 p-6 rounded-lg" : ""}`}>
+                <p className="label-elegant text-primary mb-2">{step.number}</p>
                 <h3 className="font-serif text-xl md:text-2xl text-foreground mb-3">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
-                {step.highlight && (
-                  <p className="mt-4 text-sm text-forest font-medium">
-                    * A reunião de diagnóstico é paga e representa a primeira etapa do meu método.
+                {index === 0 && (
+                  <p className="mt-4 text-sm text-primary font-medium">
+                    * O diagnóstico é pago e representa a primeira etapa do meu método.
                   </p>
                 )}
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
-        >
-          <Button variant="premium" size="xl" onClick={scrollToContact}>
-            Iniciar Conversa pelo WhatsApp
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

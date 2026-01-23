@@ -15,19 +15,19 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Premium variants for Larissa Kassner brand
+        // Premium variants for Larissa Kassner brand - Marsala theme
         premium: 
-          "bg-forest text-primary-foreground hover:bg-forest-light border-0 tracking-wide font-normal",
+          "bg-primary text-primary-foreground hover:bg-primary/90 border-0 tracking-wide font-semibold shadow-soft hover:shadow-elevated",
         "premium-outline":
-          "border border-forest text-forest bg-transparent hover:bg-forest hover:text-primary-foreground tracking-wide font-normal",
-        "premium-gold":
-          "bg-gold text-charcoal hover:bg-gold/90 border-0 tracking-wide font-normal",
+          "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground tracking-wide font-semibold",
+        "premium-rosa":
+          "bg-secondary text-secondary-foreground hover:bg-secondary/90 border-0 tracking-wide font-semibold",
         "premium-subtle":
-          "bg-sand text-charcoal hover:bg-sand/80 border-0 tracking-wide font-normal",
+          "bg-rosa-soft text-primary hover:bg-secondary/30 border-0 tracking-wide font-semibold",
         hero:
-          "bg-primary-foreground text-primary hover:bg-primary-foreground/90 tracking-wide font-normal shadow-elevated",
+          "bg-primary-foreground text-primary hover:bg-primary-foreground/90 tracking-wide font-semibold shadow-elevated",
         "hero-outline":
-          "border border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 tracking-wide font-normal backdrop-blur-sm",
+          "border-2 border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 tracking-wide font-semibold backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",
