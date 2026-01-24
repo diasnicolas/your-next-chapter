@@ -66,26 +66,7 @@ const VideoTestimonials = () => {
           className="flex flex-col items-center"
         >
           {/* Video container - vertical shorts format */}
-          <div className="relative w-full max-w-[320px] md:max-w-[360px]">
-            {/* Navigation arrows */}
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevVideo}
-              className="absolute top-1/2 -translate-y-1/2 -left-14 md:-left-20 z-10 rounded-full w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border-rosa/20 hover:bg-rosa-soft hover:border-rosa"
-            >
-              <ChevronLeft className="w-5 h-5 text-primary" />
-            </Button>
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextVideo}
-              className="absolute top-1/2 -translate-y-1/2 -right-14 md:-right-20 z-10 rounded-full w-10 h-10 md:w-12 md:h-12 bg-white shadow-lg border-rosa/20 hover:bg-rosa-soft hover:border-rosa"
-            >
-              <ChevronRight className="w-5 h-5 text-primary" />
-            </Button>
-
+          <div className="relative w-full max-w-[320px] md:max-w-[360px] px-0 md:px-0">
             {/* Video frame - 9:16 aspect ratio for shorts */}
             <AnimatePresence mode="wait">
               <motion.div
@@ -106,6 +87,46 @@ const VideoTestimonials = () => {
                 />
               </motion.div>
             </AnimatePresence>
+          </div>
+
+          {/* Navigation arrows - below video on mobile, sides on desktop */}
+          <div className="flex md:hidden justify-center gap-4 mt-6">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={prevVideo}
+              className="rounded-full w-12 h-12 bg-white shadow-lg border-rosa/20 hover:bg-rosa-soft hover:border-rosa"
+            >
+              <ChevronLeft className="w-5 h-5 text-primary" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={nextVideo}
+              className="rounded-full w-12 h-12 bg-white shadow-lg border-rosa/20 hover:bg-rosa-soft hover:border-rosa"
+            >
+              <ChevronRight className="w-5 h-5 text-primary" />
+            </Button>
+          </div>
+
+          {/* Desktop navigation arrows - positioned to sides */}
+          <div className="hidden md:block">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={prevVideo}
+              className="absolute top-1/2 -translate-y-1/2 left-[calc(50%-220px)] z-10 rounded-full w-12 h-12 bg-white shadow-lg border-rosa/20 hover:bg-rosa-soft hover:border-rosa"
+            >
+              <ChevronLeft className="w-5 h-5 text-primary" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={nextVideo}
+              className="absolute top-1/2 -translate-y-1/2 right-[calc(50%-220px)] z-10 rounded-full w-12 h-12 bg-white shadow-lg border-rosa/20 hover:bg-rosa-soft hover:border-rosa"
+            >
+              <ChevronRight className="w-5 h-5 text-primary" />
+            </Button>
           </div>
 
           {/* Pagination dots */}
