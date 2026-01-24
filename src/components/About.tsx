@@ -38,7 +38,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[3/5] rounded-lg overflow-hidden relative group">
+            <div className="aspect-[3/4] rounded-lg overflow-hidden relative group max-w-[360px] md:max-w-[440px] mx-auto">
               {images.map((image, index) => (
                 <motion.img
                   key={index}
