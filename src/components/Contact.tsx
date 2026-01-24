@@ -76,26 +76,28 @@ const Contact = () => {
             </div>
 
             <div className="flex justify-center">
-              <Button
-                variant="hero"
-                size="xl"
-                onClick={() => {
-                  if (!nome.trim()) {
-                    setErroNome('Por favor, informe seu nome completo.');
-                    nomeRef.current?.focus();
-                    return;
-                  }
-                  const parts = [];
-                  if (nome.trim()) parts.push(`Meu nome é ${nome.trim()}.`);
-                  if (descricao.trim()) parts.push(`Descrição: ${descricao.trim()}`);
-                  const mensagem = parts.join(' ');
-                  irParaWhatsApp('agendardiagnostico', mensagem);
-                }}
-                className="flex items-center gap-3"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>Agendar reunião de diagnóstico</span>
-              </Button>
+              <div className="w-full max-w-2xl">
+                <Button
+                  variant="hero"
+                  size="xl"
+                  onClick={() => {
+                    if (!nome.trim()) {
+                      setErroNome('Por favor, informe seu nome completo.');
+                      nomeRef.current?.focus();
+                      return;
+                    }
+                    const parts = [];
+                    if (nome.trim()) parts.push(`Meu nome é ${nome.trim()}.`);
+                    if (descricao.trim()) parts.push(`Descrição: ${descricao.trim()}`);
+                    const mensagem = parts.join(' ');
+                    irParaWhatsApp('agendardiagnostico', mensagem);
+                  }}
+                  className="flex items-center gap-3 w-full justify-center"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  <span>Agendar reunião de diagnóstico</span>
+                </Button>
+              </div>
             </div>
           </motion.div>
 
