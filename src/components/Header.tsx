@@ -74,7 +74,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-white"}`}
+            className={`md:hidden p-2 "text-foreground"`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
