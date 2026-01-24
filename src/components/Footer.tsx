@@ -1,5 +1,5 @@
 import { Instagram, Mail } from "lucide-react";
-import logoFull from "@/assets/logo-full.jpg";
+import submarca from "@/assets/submarca.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,36 +7,48 @@ const Footer = () => {
   return (
     <footer className="py-12 bg-background border-t border-border">
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo & Copyright */}
-          <div className="text-center md:text-left">
-            <img 
-              src={logoFull} 
-              alt="Larissa Kassner - Travel Designer" 
-              className="h-20 w-auto mb-4"
-            />
-            <p className="text-sm text-muted-foreground">
-              © {currentYear} Todos os direitos reservados
-            </p>
+        {/* Top row: centered logo */}
+        <div className="flex justify-center mb-6">
+          <img
+            src={submarca}
+            alt="Larissa Kassner - Travel Designer"
+            className="h-28 md:h-36 w-auto"
+          />
+        </div>
+
+        {/* Bottom row: left copyright, center developed credit, right social icons */}
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+          <div className="text-left">
+            <p className="text-sm text-muted-foreground">© {currentYear} Todos os direitos reservados</p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-6">
+          <div className="text-center">
             <a
-              href="https://instagram.com/larissakassner"
+              href="https://zapturize.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="Instagram"
             >
-              <Instagram className="w-5 h-5" />
+              Desenvolvido por ZapTurize
             </a>
+          </div>
+
+          <div className="flex justify-end items-center gap-6">
             <a
               href="mailto:contato@larissakassner.com.br"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
+            </a>
+            <a
+              href="https://instagram.com/lari_kassner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5" />
             </a>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import heroImage from "@/assets/hero-travel.jpg";
+import heroImage from "@/assets/hero-travel.webp";
 
 const Hero = () => {
   const scrollToMethod = () => {
@@ -25,9 +25,9 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Destino de viagem luxuoso"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-75"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
       </div>
 
       {/* Content */}
@@ -38,17 +38,9 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="label-elegant text-white/80 mb-6"
-          >
-            Travel Designer
-          </motion.p>
 
           <h1 className="heading-display text-white mb-8 text-balance">
-            Viagens internacionais sob medida, no seu ritmo e no seu jeito de viajar.
+            Viagens sob medida, no seu ritmo e no seu jeito de viajar.
           </h1>
 
           <motion.p

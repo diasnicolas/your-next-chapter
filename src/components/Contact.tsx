@@ -1,19 +1,20 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useIrParaWhatsApp } from "@/hooks/useIrParaWhatsApp";
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const whatsappNumber = "5511999999999"; // Substituir pelo número real
-  const whatsappMessage = encodeURIComponent(
-    "Olá, Larissa! Gostaria de agendar uma reunião de diagnóstico de viagem."
-  );
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
+  const irParaWhatsApp = useIrParaWhatsApp();
+  const [nome, setNome] = useState('');
+  const [descricao, setDescricao] = useState('');
+  const [interesse, setInteresse] = useState('');
+  const [erroNome, setErroNome] = useState('');
+  const nomeRef = useRef<HTMLInputElement | null>(null);
+  
   return (
     <section
       id="contato"
@@ -44,22 +45,74 @@ const Contact = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
+            className=""
           >
-            <Button
-              variant="hero"
-              size="xl"
-              asChild
-              className="gap-3"
-            >
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
+            <div className="max-w-2xl mx-auto text-left space-y-4 mb-6">
+              <div className="relative group">
+                <input
+                  ref={nomeRef}
+                  type="text"
+                  value={nome}
+                  onChange={(e) => { setNome(e.target.value); if (erroNome) setErroNome(''); }}
+                  placeholder=" "
+                  className={`w-full rounded-md border px-3 py-3 bg-background text-primary ${erroNome ? 'border-destructive' : 'border-input'}`}
+                />
+                <label className="absolute left-3 -top-3 text-xs bg-primary px-1 text-white pointer-events-none transition-all">Nome completo</label>
+                {erroNome && <p className="mt-1 text-sm text-destructive">{erroNome}</p>}
+              </div>
+
+              <div className="relative group">
+                <select
+                  value={interesse}
+                  onChange={(e) => setInteresse(e.target.value)}
+                  className="w-full rounded-md border border-input px-3 py-3 bg-background text-primary appearance-none"
+                >
+                  <option value="">Não definido</option>
+                  <option value="Praia">Praia</option>
+                  <option value="Cultura">Cultura</option>
+                  <option value="Aventura">Aventura</option>
+                  <option value="Romântico">Romântico</option>
+                  <option value="Família">Família</option>
+                  <option value="Luxo">Luxo</option>
+                </select>
+                <label className="absolute left-3 -top-3 text-xs bg-primary px-1 text-white pointer-events-none transition-all">Perfil / Interesse</label>
+              </div>
+
+              <div className="relative group">
+                <textarea
+                  value={descricao}
+                  onChange={(e) => setDescricao(e.target.value)}
+                  placeholder=" "
+                  rows={4}
+                  className="w-full rounded-md border border-input px-3 py-3 bg-background text-primary"
+                />
+                <label className="absolute left-3 -top-3 text-xs bg-primary px-1 text-white pointer-events-none transition-all">Descreva sua ideia / destinos</label>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <Button
+                variant="hero"
+                size="xl"
+                onClick={() => {
+                  if (!nome.trim()) {
+                    setErroNome('Por favor, informe seu nome completo.');
+                    nomeRef.current?.focus();
+                    return;
+                  }
+                  const parts = [];
+                  if (nome.trim()) parts.push(`Meu nome é ${nome.trim()}.`);
+                  if (interesse && interesse.trim() !== '') parts.push(`Interesse: ${interesse}.`);
+                  if (descricao.trim()) parts.push(`Descrição: ${descricao.trim()}`);
+                  const mensagem = parts.join(' ');
+                  irParaWhatsApp('agendardiagnostico', mensagem);
+                }}
+                className="flex items-center gap-3"
               >
                 <MessageCircle className="w-5 h-5" />
-                Agendar reunião de diagnóstico
-              </a>
-            </Button>
+                <span>Agendar reunião de diagnóstico</span>
+              </Button>
+            </div>
           </motion.div>
 
           <motion.div
@@ -69,7 +122,7 @@ const Contact = () => {
             className="mt-12 pt-8 border-t border-primary-foreground/20"
           >
             <p className="text-sm text-primary-foreground/60">
-              Respondo em até 24 horas úteis. Aguardo você!
+              Respondo rapidamente. Aguardo você!
             </p>
           </motion.div>
         </motion.div>

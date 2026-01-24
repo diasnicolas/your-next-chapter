@@ -31,12 +31,14 @@ const Diagnosis = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const whatsappNumber = "5511999999999"; // Substituir pelo número real
-  const whatsappMessage = encodeURIComponent(
-    "Olá, Larissa! Gostaria de agendar uma reunião de diagnóstico de viagem."
-  );
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const scrollToContact = () => {
+    const element = document.querySelector("#contato");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
+  
   return (
     <section id="diagnostico" className="py-24 md:py-32 bg-rosa-soft/30" ref={ref}>
       <div className="container">
@@ -104,16 +106,14 @@ const Diagnosis = () => {
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="premium" size="xl" asChild className="gap-3">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5" />
-                Agendar reunião de diagnóstico
-              </a>
+            <Button variant="premium" size="xl" onClick={scrollToContact}>
+              Agendar reunião de diagnóstico
             </Button>
+  
           </motion.div>
         </div>
       </div>

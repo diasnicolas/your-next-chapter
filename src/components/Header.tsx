@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoMonogram from "@/assets/logo-monogram.jpg";
+import logo from "@/assets/logotipo.png";
 
 const navItems = [
   { label: "Sobre", href: "#sobre" },
@@ -45,10 +45,10 @@ const Header = () => {
       >
         <div className="container flex items-center justify-between">
           <a href="#" className="flex items-center">
-            <img 
-              src={logoMonogram} 
-              alt="Larissa Kassner - Travel Designer" 
-              className="h-12 md:h-14 w-auto"
+            <img
+              src={logo}
+              alt="Larissa Kassner - Travel Designer"
+              className={`h-20 md:h-24 w-auto ${isScrolled ? "" : "bg-white/95 p-1 rounded-md"}`}
             />
           </a>
 

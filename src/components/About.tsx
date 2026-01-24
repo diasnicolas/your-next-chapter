@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import larissaPortrait from "@/assets/larissa-portrait.jpg";
-import heroTravel from "@/assets/hero-travel.jpg";
+import heroTravel from "@/assets/hero-travel.webp";
 import destinationItaly from "@/assets/destination-italy.jpg";
 import destinationMaldives from "@/assets/destination-maldives.jpg";
 
@@ -38,7 +38,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-lg overflow-hidden relative group">
+            <div className="aspect-[3/5] rounded-lg overflow-hidden relative group">
               {images.map((image, index) => (
                 <motion.img
                   key={index}

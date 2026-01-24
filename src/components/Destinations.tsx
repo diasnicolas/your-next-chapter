@@ -89,7 +89,7 @@ const Destinations = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-muted-foreground mt-12 text-sm"
         >
-          Este direcionamento pode ser ampliado conforme evolução da marca e aprofundamento de expertise.
+          Cada roteiro é pensado sob medida para atender a sua expectativa.
         </motion.p>
       </div>
     </section>
