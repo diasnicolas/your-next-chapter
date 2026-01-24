@@ -6,6 +6,8 @@ import Method from "@/components/Method";
 import About from "@/components/About";
 import Diagnosis from "@/components/Diagnosis";
 import Destinations from "@/components/Destinations";
+import VideoTestimonials from "@/components/VideoTestimonials";
+import TextTestimonials from "@/components/TextTestimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -21,6 +23,8 @@ const Index = () => {
         <About />
         <Diagnosis />
         <Destinations />
+        <VideoTestimonials />
+        <TextTestimonials />
         <Contact />
       </main>
       <Footer />

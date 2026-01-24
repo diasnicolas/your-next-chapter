@@ -16,10 +16,11 @@ const Footer = () => {
           />
         </div>
 
-        {/* Bottom row: left copyright, center developed credit, right social icons */}
+        {/* Bottom row: left copyright + CNPJ, center developed credit, right social icons */}
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
-          <div className="text-left">
+          <div className="text-left space-y-1">
             <p className="text-sm text-muted-foreground">© {currentYear} Todos os direitos reservados</p>
+            <p className="text-xs text-muted-foreground/70">CNPJ: XX.XXX.XXX/0001-XX</p>
           </div>
 
           <div className="text-center">
