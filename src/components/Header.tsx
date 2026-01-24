@@ -39,8 +39,8 @@ const Header = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-background/95 backdrop-blur-md shadow-soft py-4"
-            : "bg-transparent py-6"
+            ? "bg-white/60 backdrop-blur-md shadow-soft py-4"
+            : "bg-white/10 py-6"
         }`}
       >
         <div className="container flex items-center justify-between">
@@ -48,7 +48,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Larissa Kassner - Travel Designer"
-              className={`h-20 md:h-24 w-auto ${isScrolled ? "" : "bg-white/95 p-1 rounded-md"}`}
+              className={`h-20 md:h-24 w-auto `}
             />
           </a>
 
@@ -58,17 +58,13 @@ const Header = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm tracking-wide transition-colors link-underline ${
-                  isScrolled
-                    ? "text-muted-foreground hover:text-foreground"
-                    : "text-white/80 hover:text-white"
-                }`}
+                className="text-sm tracking-wide transition-colors link-underline text-marsala hover:opacity-80"
               >
                 {item.label}
               </button>
             ))}
             <Button
-              variant={isScrolled ? "premium" : "hero"}
+              variant="hero-outline"
               size="lg"
               onClick={() => scrollToSection("#contato")}
             >

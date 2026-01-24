@@ -27,7 +27,7 @@ const buttonVariants = cva(
         hero:
           "bg-primary-foreground text-primary hover:bg-primary-foreground/90 tracking-wide font-semibold shadow-elevated",
         "hero-outline":
-          "border-2 border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 tracking-wide font-semibold backdrop-blur-sm",
+          "border-2 border-marsala text-marsala bg-transparent hover:bg-primary-foreground/10 tracking-wide font-semibold backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",
