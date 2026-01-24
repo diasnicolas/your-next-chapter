@@ -11,7 +11,6 @@ const Contact = () => {
   const irParaWhatsApp = useIrParaWhatsApp();
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
-  const [interesse, setInteresse] = useState('');
   const [erroNome, setErroNome] = useState('');
   const nomeRef = useRef<HTMLInputElement | null>(null);
   
@@ -32,9 +31,11 @@ const Contact = () => {
           <h2 className="heading-section mb-6">
             Vamos conversar sobre a sua viagem?
           </h2>
+          <p className="body-large text-primary-foreground/85">
+            Se você busca uma viagem bem planejada, no seu ritmo
+          </p>
           <p className="body-large text-primary-foreground/85 mb-6">
-            Se você busca uma viagem bem planejada, no seu ritmo e com decisões 
-            conscientes, o próximo passo é simples.
+            e com decisões conscientes, o próximo passo é simples.
           </p>
           <p className="text-primary-foreground/80 mb-10">
             Agende sua reunião de diagnóstico e vamos entender, juntos, se esse 
@@ -54,35 +55,19 @@ const Contact = () => {
                   type="text"
                   value={nome}
                   onChange={(e) => { setNome(e.target.value); if (erroNome) setErroNome(''); }}
-                  placeholder=" "
+                  placeholder="Nome e sobrenome"
                   className={`w-full rounded-md border px-3 py-3 bg-background text-primary ${erroNome ? 'border-destructive' : 'border-input'}`}
                 />
                 <label className="absolute left-3 -top-3 text-xs bg-primary px-1 text-white pointer-events-none transition-all">Nome completo</label>
                 {erroNome && <p className="mt-1 text-sm text-destructive">{erroNome}</p>}
               </div>
 
-              <div className="relative group">
-                <select
-                  value={interesse}
-                  onChange={(e) => setInteresse(e.target.value)}
-                  className="w-full rounded-md border border-input px-3 py-3 bg-background text-primary appearance-none"
-                >
-                  <option value="">Não definido</option>
-                  <option value="Praia">Praia</option>
-                  <option value="Cultura">Cultura</option>
-                  <option value="Aventura">Aventura</option>
-                  <option value="Romântico">Romântico</option>
-                  <option value="Família">Família</option>
-                  <option value="Luxo">Luxo</option>
-                </select>
-                <label className="absolute left-3 -top-3 text-xs bg-primary px-1 text-white pointer-events-none transition-all">Perfil / Interesse</label>
-              </div>
-
+              
               <div className="relative group">
                 <textarea
                   value={descricao}
                   onChange={(e) => setDescricao(e.target.value)}
-                  placeholder=" "
+                  placeholder="Conte brevemente sua ideia de viagem e destinos em mente"
                   rows={4}
                   className="w-full rounded-md border border-input px-3 py-3 bg-background text-primary"
                 />
@@ -102,7 +87,6 @@ const Contact = () => {
                   }
                   const parts = [];
                   if (nome.trim()) parts.push(`Meu nome é ${nome.trim()}.`);
-                  if (interesse && interesse.trim() !== '') parts.push(`Interesse: ${interesse}.`);
                   if (descricao.trim()) parts.push(`Descrição: ${descricao.trim()}`);
                   const mensagem = parts.join(' ');
                   irParaWhatsApp('agendardiagnostico', mensagem);
@@ -122,7 +106,7 @@ const Contact = () => {
             className="mt-12 pt-8 border-t border-primary-foreground/20"
           >
             <p className="text-sm text-primary-foreground/60">
-              Respondo rapidamente. Aguardo você!
+              Atendimento direto comigo em todas as etapas do planejamento.
             </p>
           </motion.div>
         </motion.div>

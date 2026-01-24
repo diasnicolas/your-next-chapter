@@ -7,23 +7,19 @@ import { MessageCircle, FileText, DollarSign, Compass } from "lucide-react";
 const benefits = [
   {
     icon: FileText,
-    title: "Diagnóstico estruturado",
-    description: "da sua viagem",
+    title: "Diagnóstico estruturado da sua viagem",
   },
   {
     icon: Compass,
-    title: "Clareza sobre possibilidades",
-    description: "e caminhos",
+    title: "Clareza sobre possibilidades e caminhos",
   },
   {
     icon: DollarSign,
-    title: "Definição do investimento",
-    description: "do projeto",
+    title: "Definição do investimento do projeto",
   },
   {
     icon: MessageCircle,
-    title: "Base sólida",
-    description: "para um planejamento consciente",
+    title: "Base sólida para um planejamento consciente",
   },
 ];
 
@@ -95,9 +91,6 @@ const Diagnosis = () => {
                   <h4 className="font-serif text-lg text-foreground mb-1">
                     {benefit.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {benefit.description}
-                  </p>
                 </motion.div>
               ))}
             </div>
