@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
           <div className="text-left space-y-1">
             <p className="text-sm text-muted-foreground">© {currentYear} Todos os direitos reservados</p>
-            <p className="text-xs text-muted-foreground/70">CNPJ: XX.XXX.XXX/0001-XX</p>
+            <p className="text-xs text-muted-foreground/70">CNPJ: 59.578.284/0001-40</p>
           </div>
 
           <div className="text-center">
