@@ -119,7 +119,7 @@ const Contact = () => {
             className="mt-12 pt-8 border-t border-primary-foreground/20"
           >
             <p className="text-sm text-primary-foreground/60">
-              Atendimento direto comigo em todas as etapas do planejamento.<br />
+              Atendimento direto comigo.<br />
               Durante todas as etapas do planejamento.
             </p>
           </motion.div>
