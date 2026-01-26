@@ -40,10 +40,13 @@ const Contact = () => {
           </p>
 
           <p className="body-large text-primary-foreground/85 md:hidden">
-            Se você busca uma viagem bem planejada, 
+            Se você busca uma viagem 
           </p>
           <p className="body-large text-primary-foreground/85 md:hidden">
-            no seu ritmo e com decisões conscientes,
+            bem planejada, no seu ritmo
+          </p>
+          <p className="body-large text-primary-foreground/85 md:hidden">
+            e com decisões conscientes,
           </p>
           <p className="body-large text-primary-foreground/85 mb-6 md:hidden">
             o próximo passo é simples.
