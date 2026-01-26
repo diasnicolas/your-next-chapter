@@ -36,7 +36,7 @@ const Footer = () => {
 
           <div className="flex justify-end items-center gap-6">
             <a
-              href="mailto:contato@larissakassner.com.br"
+              href="mailto:contato@larikassner.com.br"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >

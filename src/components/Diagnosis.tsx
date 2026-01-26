@@ -50,20 +50,33 @@ const Diagnosis = () => {
               Reunião de diagnóstico de viagem
             </h2>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              A reunião de diagnóstico é o primeiro passo do meu método. Nela, eu 
-              entendo com profundidade o que você busca viver, como você gosta de 
-              viajar e o nível de complexidade do planejamento.
+              A reunião de diagnóstico é o primeiro passo do meu método.
+            </p>
+            <p className="body-large text-muted-foreground max-w-2xl mx-auto">
+              Nela, eu entendo com profundidade o que você busca viver, como você gosta de viajar e o nível de complexidade do planejamento. 
             </p>
           </motion.div>
 
+          {/* Mobile version with line breaks */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center text-muted-foreground mb-12"
+            className="text-center text-muted-foreground mb-12 md:hidden"
           >
-            Esse encontro evita propostas genéricas, expectativas desalinhadas e 
-            decisões cansativas ao longo do processo.
+            Esse encontro evita propostas genéricas, <br />
+            expectativas desalinhadas e decisões <br />
+            cansativas ao longo do processo.
+          </motion.p>
+
+          {/* Desktop version without line breaks */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="hidden text-center text-muted-foreground mb-12 md:block"
+          >
+            Esse encontro evita propostas genéricas, expectativas desalinhadas e decisões cansativas ao longo do processo.
           </motion.p>
 
           {/* Benefits Grid */}

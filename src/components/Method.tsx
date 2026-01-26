@@ -148,7 +148,7 @@ const Method = () => {
                   {/* First step highlight */}
                   {index === 0 && (
                     <p className="mt-5 text-sm text-primary font-medium flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                     
                       O diagnóstico é pago e representa a primeira etapa do meu método.
                     </p>
                   )}
@@ -163,12 +163,14 @@ const Method = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1 }}
-          className="max-w-3xl mx-auto mt-16 text-center"
+          className="max-w-3xl mx-auto mt-16"
         >
-          <div className="bg-gradient-to-r from-rosa-soft/40 via-rosa-soft/60 to-rosa-soft/40 rounded-2xl p-8 border border-primary/10">
+          <div className="bg-gradient-to-r from-rosa-soft/40 via-rosa-soft/60 to-rosa-soft/40 rounded-2xl p-8 border border-primary/10 text-left">
             <p className="text-foreground leading-relaxed font-medium">
-              O objetivo é garantir clareza, tranquilidade e segurança para que você 
-              viaje com confiança, sabendo exatamente o que esperar em cada etapa.
+              O objetivo é garantir clareza, tranquilidade e segurança.
+            </p>
+            <p className="text-foreground leading-relaxed font-medium">
+              Para que você viaje com confiança, sabendo exatamente o que esperar em cada etapa.
             </p>
           </div>
         </motion.div>

@@ -50,7 +50,7 @@ const Hero = () => {
             className="body-large text-marsala max-w-2xl mx-auto mb-12"
           >
             Planejamento profissional para quem busca conforto, clareza e experiências 
-            autênticas — sem pacotes prontos, sem grupos e sem improvisos.
+            autênticas. Sem pacotes prontos, sem grupos e sem improvisos.
           </motion.p>
 
           <motion.div

@@ -9,6 +9,8 @@ const navItems = [
   { label: "Como Funciona", href: "#metodo" },
   { label: "Diagnóstico", href: "#diagnostico" },
   { label: "Destinos", href: "#destinos" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Agendar Diagnóstico", href: "#contato" }
 ];
 
 const Header = () => {
@@ -63,13 +65,7 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <Button
-              variant="hero-outline"
-              size="lg"
-              onClick={() => scrollToSection("#contato")}
-            >
-              Agendar Diagnóstico
-            </Button>
+           
           </nav>
 
           {/* Mobile Menu Button */}
@@ -98,7 +94,7 @@ const Header = () => {
             className="fixed inset-0 z-40 bg-background pt-24 md:hidden"
           >
             <nav className="container flex flex-col items-center gap-8 py-12">
-              {navItems.map((item) => (
+              {navItems.filter(item => item.label !== "Agendar Diagnóstico").map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}

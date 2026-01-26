@@ -2,16 +2,12 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import larissaPortrait from "@/assets/larissa-portrait.jpg";
-import heroTravel from "@/assets/hero-travel.webp";
-import destinationItaly from "@/assets/destination-italy.jpg";
-import destinationMaldives from "@/assets/destination-maldives.jpg";
+import sobre1foto from "@/assets/sobre_1.webp";
+import sobre2foto from "@/assets/sobre_2.webp";
 
 const images = [
-  { src: larissaPortrait, alt: "Larissa Kassner - Travel Designer" },
-  { src: heroTravel, alt: "Paisagem de viagem" },
-  { src: destinationItaly, alt: "Itália" },
-  { src: destinationMaldives, alt: "Maldivas" },
+  { src: sobre1foto, alt: "Foto slide 1 - Larissa Kassner - Travel Designer" },
+  { src: sobre2foto, alt: "Foto slide 2 - Larissa Kassner - Travel Designer" }
 ];
 
 const About = () => {

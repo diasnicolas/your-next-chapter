@@ -8,25 +8,25 @@ const regions = [
     icon: Globe,
     title: "Europa Ocidental",
     description: "Ideal para quem busca cultura, gastronomia, cidades históricas e deslocamentos bem conectados.",
-    examples: "Portugal, França, Itália, Espanha, Holanda",
+    examples: "Itália, Suíça, Portugal, França, Espanha",
   },
   {
     icon: Building,
     title: "Estados Unidos",
     description: "Destino de alta previsibilidade, conforto e facilidade logística, especialmente para viagens longas ou primeiras grandes viagens.",
-    examples: "Costa Oeste, Nova York, Florida, Parques Nacionais",
+    examples: "Costa Oeste, Nova York, Flórida, Aspen",
   },
   {
     icon: Trees,
     title: "Canadá",
     description: "Combinação de natureza, cidades organizadas e ritmo mais tranquilo, muito procurado por viajantes maduros.",
-    examples: "Vancouver, Toronto, Montréal, Banff",
+    examples: "Vancouver, Toronto, Montreal, Banff",
   },
   {
     icon: Umbrella,
     title: "Caribe",
     description: "Viagens focadas em descanso premium, celebrações e experiências de conforto — não aventura.",
-    examples: "Aruba, Curaçao, St. Barths, Turks and Caicos",
+    examples: "Curaçao, St.Barths, Bahamas",
   },
 ];
 
@@ -89,7 +89,7 @@ const Destinations = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-muted-foreground mt-12 text-sm"
         >
-          Cada roteiro é pensado sob medida para atender a sua expectativa.
+          Cada roteiro é pensado para atender a sua expectativa.
         </motion.p>
       </div>
     </section>

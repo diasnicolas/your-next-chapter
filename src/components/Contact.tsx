@@ -29,13 +29,24 @@ const Contact = () => {
         >
           <p className="label-elegant text-secondary mb-4">Próximo Passo</p>
           <h2 className="heading-section mb-6">
-            Vamos conversar sobre a sua viagem?
+            Vamos conversar sobre a sua próxima viagem?
           </h2>
-          <p className="body-large text-primary-foreground/85">
+          
+          <p className="body-large text-primary-foreground/85 hidden md:block">
             Se você busca uma viagem bem planejada, no seu ritmo
           </p>
-          <p className="body-large text-primary-foreground/85 mb-6">
+          <p className="body-large text-primary-foreground/85 mb-6 hidden md:block">
             e com decisões conscientes, o próximo passo é simples.
+          </p>
+
+          <p className="body-large text-primary-foreground/85 md:hidden">
+            Se você busca uma viagem bem planejada, 
+          </p>
+          <p className="body-large text-primary-foreground/85 md:hidden">
+            no seu ritmo e com decisões conscientes,
+          </p>
+          <p className="body-large text-primary-foreground/85 mb-6 md:hidden">
+            o próximo passo é simples.
           </p>
           <p className="text-primary-foreground/80 mb-10">
             Agende sua reunião de diagnóstico e vamos entender, juntos, se esse 
@@ -108,7 +119,8 @@ const Contact = () => {
             className="mt-12 pt-8 border-t border-primary-foreground/20"
           >
             <p className="text-sm text-primary-foreground/60">
-              Atendimento direto comigo em todas as etapas do planejamento.
+              Atendimento direto comigo em todas as etapas do planejamento.<br />
+              Durante todas as etapas do planejamento.
             </p>
           </motion.div>
         </motion.div>

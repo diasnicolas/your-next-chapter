@@ -9,45 +9,39 @@ interface Testimonial {
   name: string;
   location: string;
   text: string;
-  image: string;
 }
 
 // Placeholders - substituir pelos depoimentos reais
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Nome da Cliente 1",
-    location: "Viagem para Europa",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+    name: "Fátima",
+    location: "Itália",
+    text: " Planejar minha viagem com a Larissa foi uma experiência extremamente positiva. Desde a primeira reunião, ela conduziu todo o processo com muito profissionalismo e atenção genuína ao que eu e minha irmã desejávamos viver. Já no segundo encontro, tínhamos em mãos um roteiro completo, com os pontos essenciais do destino e, ao mesmo tempo, sugestões de lugares pitorescos e especiais: aqueles detalhes que fazem a diferença e transformam a viagem em algo único! Tudo foi pensado com respeito aos nossos objetivos, mas também com um cuidado e sensibilidade que se percebem em cada escolha. Foi assim que nossa viagem de 24 dias se tornou realidade: leve, bem organizada e acima das expectativas. Sou muito grata à Larissa por ter feito parte da realização desse sonho!"
   },
   {
     id: 2,
-    name: "Nome da Cliente 2",
-    location: "Viagem para Estados Unidos",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    name: "Bernardo",
+    location: "Suíça",
+    text: "O roteiro foi extremamente equilibrado, combinando bem deslocamentos, tempo livre e passeios, sempre com hospedagens em localizações estratégicas. A organização das informações, com dicas diárias e todos os vouchers reunidos em um único link, tornou a experiência prática e fluida. Durante a viagem, o suporte foi impecável, com respostas rápidas, clareza e atenção aos ajustes necessários. Vivemos uma viagem acima das expectativas! Recomendamos sem hesitar! "
   },
   {
     id: 3,
-    name: "Nome da Cliente 3",
-    location: "Viagem para Canadá",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    name: "Samantha",
+    location: "Estados Unidos & Canadá",
+    text: "Minhas férias em São Francisco e Vancouver foram simplesmente inesquecíveis, e grande parte disso se deve ao cuidado e à sensibilidade da Larissa no planejamento da viagem.  Ela teve a atenção de escolher um hotel em uma região mais plana e estrategicamente localizada, próxima aos principais pontos turísticos: algo essencial para mim, já que faço questão de explorar tudo a pé. Cada dia do roteiro foi pensado com precisão, respeitando o tempo de caminhada e até mesmo os desníveis naturais das cidades, o que fez toda a diferença na experiência. Em nenhum momento me senti cansada ou perdida, apenas aproveitando. Um destaque especial para Whistler: não fazia parte dos meus planos iniciais, mas a Larissa acreditou tanto nessa sugestão e explicou com tanta segurança que aceitei incluí-la. Ainda bem. Foi o ponto alto da viagem! Senti carinho, escuta e cuidado em cada detalhe. Voltei muito bem e com a certeza de que jamais esquecerei essa viagem. Um roteiro impecável, nota mil! "
   },
   {
     id: 4,
-    name: "Nome da Cliente 4",
-    location: "Viagem para Caribe",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    name: "Thalita",
+    location: "Argentina & Uruguai",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
   },
   {
     id: 5,
-    name: "Nome da Cliente 5",
-    location: "Viagem para Europa",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
+    name: "Samantha",
+    location: "Itália & Suíça",
+    text: "Fiz uma viagem inesquecível pela Itália e Suíça e vivi uma experiência muito especial do início ao fim. A Larissa criou um roteiro totalmente personalizado, com escolhas que pareciam traduzir exatamente o que eu queria viver. Cada detalhe foi pensado com cuidado, atenção e sensibilidade, daqueles que fazem a viagem fluir de forma leve e prazerosa, sabe? Viajei tranquila, sabendo que havia um planejamento sólido por trás de tudo. No fim, ainda recebi um álbum com registros da viagem, preparado com o mesmo carinho presente em todo o processo. Foi uma viagem gostosa, bem cuidada e impossível de esquecer!"
   },
 ];
 
@@ -55,16 +49,24 @@ const TextTestimonials = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setExpandedIndex(null);
   };
 
   const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setExpandedIndex(null);
   };
 
   const currentTestimonial = testimonials[currentIndex];
+  const isExpanded = expandedIndex === currentIndex;
+
+  // Contagem aproximada de linhas (assumindo ~65 caracteres por linha)
+  const lineCount = Math.ceil(currentTestimonial.text.length / 65);
+  const shouldTruncate = lineCount > 4;
 
   return (
     <section id="depoimentos" className="py-20 md:py-28 bg-background" ref={ref}>
@@ -76,10 +78,10 @@ const TextTestimonials = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-4">
-            Experiências que falam por si
+            Experiências reais, viagens bem vividas
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Feedbacks de quem confiou no meu método e viveu viagens memoráveis.
+            Relatos de clientes que confiaram no meu método
           </p>
         </motion.div>
 
@@ -87,7 +89,7 @@ const TextTestimonials = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto relative"
         >
           {/* Main testimonial card */}
           <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-rosa/10">
@@ -105,10 +107,29 @@ const TextTestimonials = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4 }}
-                className="text-lg md:text-xl text-foreground leading-relaxed mb-8 italic"
+                className={`text-lg md:text-xl text-foreground leading-relaxed mb-4 italic ${
+                  shouldTruncate && !isExpanded ? "line-clamp-4" : ""
+                }`}
               >
                 "{currentTestimonial.text}"
               </motion.p>
+
+              {/* Read More Button */}
+              {shouldTruncate && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                  className="flex justify-end"
+                >
+                  <button
+                    onClick={() => setExpandedIndex(isExpanded ? null : currentIndex)}
+                    className="text-primary hover:text-primary/80 font-medium text-sm transition-colors"
+                  >
+                    {isExpanded ? "Mostrar menos" : "Ler mais"}
+                  </button>
+                </motion.div>
+              )}
 
               {/* Author info */}
               <motion.div
@@ -118,11 +139,7 @@ const TextTestimonials = () => {
                 transition={{ duration: 0.4, delay: 0.1 }}
                 className="flex items-center gap-4"
               >
-                <img
-                  src={currentTestimonial.image}
-                  alt={currentTestimonial.name}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-rosa/30"
-                />
+              
                 <div>
                   <h4 className="font-serif font-semibold text-foreground text-lg">
                     {currentTestimonial.name}
