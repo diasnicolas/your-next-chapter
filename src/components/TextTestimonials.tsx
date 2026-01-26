@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     id: 4,
     name: "Thalita",
     location: "Argentina & Uruguai",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    text: "Quero agradecer muito pela viagem à Argentina e ao Uruguai. A Larissa deixou tudo perfeito, exatamente do nosso jeito: gastronomia incrível, sem correria e sem deixar nada importante de fora. Foi uma experiência leve, bem pensada e muito prazerosa. Obrigada mais uma vez! Já estou contando os dias para a próxima viagem."
   },
   {
     id: 5,
