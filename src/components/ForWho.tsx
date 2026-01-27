@@ -7,7 +7,7 @@ const forItems = [
   "Valoriza planejamento e previsibilidade",
   "Prefere viajar no próprio ritmo",
   "Busca conforto e boas escolhas",
-  "Quer evitar decisões cansativas durante a viagem ",
+  "Quer viajar com mais leveza",
   "Entende que método faz diferença",
 ];
 

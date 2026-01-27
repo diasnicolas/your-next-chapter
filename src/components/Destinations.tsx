@@ -25,7 +25,7 @@ const regions = [
   {
     icon: Umbrella,
     title: "Caribe",
-    description: "Viagens focadas em descanso premium, celebrações e experiências de conforto — não aventura.",
+    description: "Viagens focadas em descanso premium, celebrações e experiências de conforto.",
     examples: "Curaçao, St.Barths, Bahamas",
   },
 ];

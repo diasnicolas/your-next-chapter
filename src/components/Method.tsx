@@ -17,7 +17,7 @@ const steps = [
       "complexidade do projeto",
     ],
     conclusion:
-      "Ao final dessa etapa, você recebe um diagnóstico completo da sua viagem, com clareza sobre caminhos e possibilidades.",
+      "Ao final dessa etapa, você recebe um diagnóstico completo da sua viagem, com clareza sobre caminhos e possibilidades e o investimento do projeto de planejamento.",
   },
   {
     number: "02",
@@ -31,7 +31,7 @@ const steps = [
       "ritmo adequado para o seu perfil",
     ],
     conclusion:
-      "O investimento do projeto é definido após essa etapa, de acordo com a complexidade do planejamento.",
+      "Nesta etapa, o investimento estimado da viagem é apresentado, considerando o perfil, as escolhas e a complexidade do planejamento.",
   },
   {
     number: "03",
@@ -39,8 +39,8 @@ const steps = [
     title: "Refinamento e entrega",
     subtitle: null,
     bullets: [],
-    conclusion:
-      "O roteiro passa por ajustes e versões até a entrega final, sempre respeitando suas preferências e feedbacks.",
+    conclusion:"O roteiro passa por ajustes e versões até a entrega final, sempre respeitando suas preferências e feedbacks."
+      
   },
   {
     number: "04",
@@ -49,7 +49,7 @@ const steps = [
     subtitle: "(quando aplicável)",
     bullets: [],
     conclusion:
-      "Conforme o perfil do projeto e as necessidades do cliente, também ofereço apoio estratégico em etapas complementares da viagem, como orientações pré-embarque e suporte antes da viagem. A contratação de serviços adicionais — como reservas específicas ou acompanhamento mais próximo — é avaliada caso a caso, sempre respeitando o escopo do projeto e o estilo de viagem definido no diagnóstico.",
+      "Conforme o perfil do projeto e as necessidades do cliente, também ofereço apoio estratégico em etapas complementares da viagem, como orientações pré-embarque e suporte antes da viagem.<br/>A contratação de serviços adicionais — como reservas específicas ou acompanhamento mais próximo — avaliada caso a caso, sempre respeitando o escopo do projeto e o estilo de viagem definido no diagnóstico.",
   },
 ];
 
@@ -141,9 +141,10 @@ const Method = () => {
                   )}
 
                   {/* Conclusion */}
-                  <p className="text-foreground/90 leading-relaxed border-l-2 border-primary/30 pl-4 bg-background/50 py-2 rounded-r">
-                    {step.conclusion}
-                  </p>
+                  <p
+                    className="text-foreground/90 leading-relaxed border-l-2 border-primary/30 pl-4 bg-background/50 py-2 rounded-r"
+                    dangerouslySetInnerHTML={{ __html: step.conclusion }}
+                  />
 
                   {/* First step highlight */}
                   {index === 0 && (
@@ -165,7 +166,7 @@ const Method = () => {
           transition={{ duration: 0.6, delay: 1 }}
           className="max-w-3xl mx-auto mt-16"
         >
-          <div className="bg-gradient-to-r from-rosa-soft/40 via-rosa-soft/60 to-rosa-soft/40 rounded-2xl p-8 border border-primary/10 text-left">
+          <div className="bg-gradient-to-r from-rosa-soft/40 via-rosa-soft/60 to-rosa-soft/40 rounded-2xl p-8 border border-primary/10 text-center">
             <p className="text-foreground leading-relaxed font-medium">
               O objetivo é garantir clareza, tranquilidade e segurança.
             </p>
