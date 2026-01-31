@@ -7,49 +7,66 @@ const steps = [
   {
     number: "01",
     icon: MessageCircle,
-    title: "Reunião de diagnóstico",
-    subtitle: "Uma conversa estruturada para entender:",
+    title: "Mapeamento Estratégico da Viagem",
+    subtitle:
+      "Uma conversa estruturada e aprofundada para entender como você gosta de viajar, o que espera viver nessa experiência e quais decisões são mais importantes para o seu perfil.",
     bullets: [
-      "seu perfil de viagem",
-      "expectativas e prioridades",
+      "seu perfil e histórico de viagens",
+      "estilo e ritmo ideal",
+      "destinos e cidades de interesse",
+      "datas, flexibilidade e logística geral",
       "nível de conforto desejado",
-      "destinos, datas e flexibilidade",
+      "prioridades, desejos e restrições",
       "complexidade do projeto",
     ],
     conclusion:
-      "Ao final dessa etapa, você recebe um diagnóstico completo da sua viagem, com clareza sobre caminhos e possibilidades e o investimento do projeto de planejamento.",
+      "Ao final dessa etapa, você recebe um material completo e organizado que funciona como um mapa geral do seu projeto, trazendo clareza sobre caminhos, possibilidades e escolhas mais alinhadas ao seu perfil, além das informações referentes ao investimento do planejamento.",
   },
   {
     number: "02",
     icon: FileSearch,
-    title: "Projeto sob medida",
-    subtitle: "Com base no diagnóstico, desenvolvo:",
+    title: "Projeto do Roteiro Sob Medida",
+    subtitle:
+      "Com base no mapeamento da etapa anterior, desenvolvo o esboço do seu roteiro de viagem, considerando:",
     bullets: [
       "estrutura lógica do roteiro",
-      "divisão equilibrada dos dias",
       "escolhas estratégicas de cidades e experiências",
       "ritmo adequado para o seu perfil",
+      "sugestões de aéreo, hospedagem e seguro alinhadas às suas prioridades",
     ],
     conclusion:
-      "Nesta etapa, o investimento estimado da viagem é apresentado, considerando o perfil, as escolhas e a complexidade do planejamento.",
+      "Nesta etapa, é apresentado o investimento estimado da viagem, considerando as escolhas feitas, o nível de conforto desejado e a complexidade do planejamento.",
   },
   {
     number: "03",
     icon: FileText,
-    title: "Refinamento e entrega",
-    subtitle: null,
-    bullets: [],
-    conclusion:"O roteiro passa por ajustes e versões até a entrega final, sempre respeitando suas preferências e feedbacks."
+    title: "Entrega do Roteiro Personalizado",
+    subtitle:
+      "Após o alinhamento do esboço, desenvolvo o roteiro completo da sua viagem, totalmente personalizado e organizado para uso prático no dia a dia.",
+    bullets: [
+      "roteiro detalhado dia a dia",
+      "mapas, deslocamentos e itinerários completos",
+      "orientações sobre clima, moeda, cultura e idioma",
+      "sugestões de restaurantes, experiências e compras",
+      "dicas práticas para transporte, aplicativos e organização",
+      "todos os vouchers e documentos reunidos em um único material",
+    ],
+    conclusion:
+      "O roteiro é refinado em conjunto até traduzir com precisão o seu perfil, prioridades e estilo de viagem, com entrega digital para acompanhamento ao longo de toda a experiência.",
       
   },
   {
     number: "04",
     icon: Plane,
-    title: "Apoio estratégico e suporte pré-viagem",
-    subtitle: "(quando aplicável)",
-    bullets: [],
+    title: "Apoio Estratégico e Serviços Complementares",
+    subtitle: "(opcional)",
+    bullets: [
+      "Reservas de produtos turísticos, como passagens aéreas, hospedagem, seguro viagem, chip internacional, transfers, passeios, experiências, ingressos e serviços de guias locais.",
+      "Orientações pré-embarque, em uma reunião exclusiva realizada poucos dias antes da viagem, com apoio prático sobre aeroporto, bagagem, documentos, logística, cartões, salas VIP e pontos de atenção importantes para o destino.",
+      "Assistência durante a viagem, em formato ampliado, para clientes que desejam contar com acompanhamento mais próximo ao longo do percurso.",
+    ],
     conclusion:
-      "Conforme o perfil do projeto e as necessidades do cliente, também ofereço apoio estratégico em etapas complementares da viagem, como orientações pré-embarque e suporte antes da viagem.<br/>A contratação de serviços adicionais — como reservas específicas ou acompanhamento mais próximo — avaliada caso a caso, sempre respeitando o escopo do projeto e o estilo de viagem definido no diagnóstico.",
+      "Após a definição do roteiro final, o cliente pode optar por contratar serviços complementares, de acordo com suas necessidades, preferências e nível de suporte desejado.<br/>Esses serviços são oferecidos à parte, sempre respeitando o escopo do projeto e o estilo de viagem definido nas etapas anteriores.<br/>A contratação desses serviços é uma decisão exclusiva do cliente, de acordo com o nível de suporte que considera ideal para a sua viagem.",
   },
 ];
 
@@ -149,8 +166,7 @@ const Method = () => {
                   {/* First step highlight */}
                   {index === 0 && (
                     <p className="mt-5 text-sm text-primary font-medium flex items-center gap-2">
-                     
-                      O diagnóstico é pago e representa a primeira etapa do meu método.
+                      Essa etapa é paga e representa o primeiro passo do meu método.
                     </p>
                   )}
                 </div>
@@ -168,10 +184,9 @@ const Method = () => {
         >
           <div className="bg-gradient-to-r from-rosa-soft/40 via-rosa-soft/60 to-rosa-soft/40 rounded-2xl p-8 border border-primary/10 text-center">
             <p className="text-foreground leading-relaxed font-medium">
-              O objetivo é garantir clareza, tranquilidade e segurança.
-            </p>
-            <p className="text-foreground leading-relaxed font-medium">
-              Para que você viaje com confiança, sabendo exatamente o que esperar em cada etapa.
+              O objetivo é garantir clareza, tranquilidade e segurança,
+              <br />
+              para que você possa viajar com confiança e aproveitar a experiência sem incertezas ao longo do caminho.
             </p>
           </div>
         </motion.div>

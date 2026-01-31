@@ -4,18 +4,19 @@ import { useRef } from "react";
 import { Check, X } from "lucide-react";
 
 const forItems = [
-  "Valoriza planejamento e previsibilidade",
-  "Prefere viajar no próprio ritmo",
-  "Busca conforto e boas escolhas",
-  "Quer viajar com mais leveza",
-  "Entende que método faz diferença",
+  "Busca otimizar tempo no planejamento da sua viagem em vez de gastar horas pesquisando e comparando opções",
+  "Prefere viajar no próprio ritmo e conhecer os destinos com mais profundidade",
+  "Quer aproveitar o destino sem ter que decidir tudo durante a viagem",
+  "Valoriza boas escolhas, conforto e um roteiro bem distribuído",
+  "Prefere ter alguém experiente pensando a viagem com a sua cabeça",
 ];
 
 const notForItems = [
-  "Valoriza roteiros padronizados",
-  "Prefere viajar em grupo",
-  'Quer apenas “uma lista de lugares”',
-  "Procura resolver tudo sozinho"
+  "Prefere excursões ou roteiros padronizados com pessoas desconhecidas",
+  "Não se importa em seguir decisões coletivas ou preferências de um grupo",
+  'Busca apenas “uma lista de lugares”, sem estratégia consultiva',
+  "Gosta de resolver tudo sozinho e tem disponibilidade para assumir integralmente o planejamento da sua viagem",
+  "Não vê valor em planejamento profissional para a sua viagem"
 ];
 
 const ForWho = () => {

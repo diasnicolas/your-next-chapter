@@ -109,7 +109,7 @@ const Header = () => {
                 onClick={() => scrollToSection("#contato")}
                 className="mt-4"
               >
-                Agendar Diagnóstico
+                Agendar reunião
               </Button>
             </nav>
           </motion.div>

@@ -7,19 +7,19 @@ import { MessageCircle, FileText, DollarSign, Compass } from "lucide-react";
 const benefits = [
   {
     icon: FileText,
-    title: "Diagnóstico estruturado da sua viagem",
+    title: "Relatório Estratégico da sua Viagem",
   },
   {
     icon: Compass,
-    title: "Clareza sobre possibilidades e caminhos",
+    title: "Clareza sobre possibilidades, caminhos e prioridades",
   },
   {
     icon: DollarSign,
-    title: "Definição do investimento do projeto",
+    title: "Definição do investimento do projeto de planejamento",
   },
   {
     icon: MessageCircle,
-    title: "Base sólida para um planejamento consciente",
+    title: "Base sólida para seguir com segurança",
   },
 ];
 
@@ -47,13 +47,13 @@ const Diagnosis = () => {
           >
             <p className="label-elegant text-primary mb-4">Primeiro Passo</p>
             <h2 className="heading-section text-foreground mb-6">
-              Reunião de diagnóstico de viagem
+              Mapeamento estratégico da viagem
             </h2>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto md:block">
-            A reunião de diagnóstico é<span className="md:hidden"><br/></span> o primeiro passo do meu método.
-          </p>
+              O Mapeamento Estratégico da Viagem é<span className="md:hidden"><br /></span> o primeiro passo do meu método.
+            </p>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Nela, eu entendo com profundidade o que você busca viver, como você gosta de viajar e o nível de complexidade do planejamento. 
+              Nessa reunião, eu entendo com profundidade como você gosta de viajar, o que espera viver nessa experiência e o nível de complexidade do planejamento — para que cada decisão futura faça sentido para o seu perfil.
             </p>
           </motion.div>
 
@@ -66,7 +66,8 @@ const Diagnosis = () => {
           >
             Esse encontro evita propostas genéricas, <br />
             expectativas desalinhadas e decisões <br />
-            cansativas ao longo do processo.
+            cansativas ao longo do processo, <br />
+            trazendo clareza desde o início.
           </motion.p>
 
           {/* Desktop version without line breaks */}
@@ -76,7 +77,7 @@ const Diagnosis = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden text-center text-muted-foreground mb-12 md:block"
           >
-            Esse encontro evita propostas genéricas, expectativas desalinhadas e decisões cansativas ao longo do processo.
+            Esse encontro evita propostas genéricas, expectativas desalinhadas e decisões cansativas ao longo do processo, trazendo clareza desde o início.
           </motion.p>
 
           {/* Benefits Grid */}
@@ -109,6 +110,15 @@ const Diagnosis = () => {
             </div>
           </motion.div>
 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-muted-foreground leading-relaxed border-l-2 border-primary/30 pl-4 bg-background/50 py-3 rounded-r max-w-3xl mx-auto mb-12"
+          >
+            Mesmo que você opte por não avançar com o planejamento completo, esse material já serve como um guia estruturado para a sua viagem.
+          </motion.p>
+
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -117,7 +127,7 @@ const Diagnosis = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button variant="premium" size="xl" onClick={scrollToContact}>
-              Agendar reunião de diagnóstico
+              Agendar reunião
             </Button>
   
           </motion.div>

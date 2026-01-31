@@ -29,14 +29,14 @@ const Positioning = () => {
             <p className="body-large">
               Sou Larissa Kassner, travel designer especializada em criar roteiros 
               internacionais totalmente personalizados para pessoas que valorizam 
-              planejamento profissional, conforto e liberdade para viver a viagem 
-              no próprio ritmo.
+              planejamento profissional, conforto e e clareza em cada decisão da viagem.
             </p>
             
             <p className="body-regular">
-              Meu trabalho não é vender pacotes prontos. É desenhar experiências sob 
-              medida, com lógica, fluidez e segurança, para que você viaje com 
-              tranquilidade e aproveitamento real do seu tempo.
+              Meu trabalho não é vender pacotes prontos.<br/>
+É planejar viagens sob medida — com roteiro dia a dia, lógica de deslocamentos, escolhas estratégicas de
+hospedagem e experiências alinhadas ao seu perfil — para que você viaje com tranquilidade, segurança e
+aproveitamento real do seu tempo.
             </p>
           </motion.div>
         </div>

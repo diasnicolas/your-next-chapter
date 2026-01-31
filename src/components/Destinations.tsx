@@ -7,26 +7,34 @@ const regions = [
   {
     icon: Globe,
     title: "Europa Ocidental",
-    description: "Ideal para quem busca cultura, gastronomia, cidades históricas e deslocamentos bem conectados.",
-    examples: "Itália, Suíça, Portugal, França, Espanha",
+    description:
+      "Ideal para quem busca cultura, gastronomia, cidades históricas e deslocamentos bem conectados.",
+    examples:
+      "Itália, Suíça, Portugal, França, Espanha, Holanda, Alemanha, Irlanda, Áustria, Bélgica, Reino Unido, Luxemburgo, Mônaco",
   },
   {
     icon: Building,
     title: "Estados Unidos",
-    description: "Destino de alta previsibilidade, conforto e facilidade logística, especialmente para viagens longas ou primeiras grandes viagens.",
-    examples: "Costa Oeste, Nova York, Flórida, Aspen",
+    description:
+      "Destino de alta previsibilidade, conforto e facilidade logística, especialmente para viagens longas ou primeiras grandes viagens.",
+    examples:
+      "Nova York, Miami, Orlando, San Francisco, Los Angeles, Las Vegas, Boston, Grand Canyon, Yosemite National Park, Yellowstone National Park, Napa Valley, Charleston, Savannah, Aspen, Palm Springs",
   },
   {
     icon: Trees,
     title: "Canadá",
-    description: "Combinação de natureza, cidades organizadas e ritmo mais tranquilo, muito procurado por viajantes maduros.",
-    examples: "Vancouver, Toronto, Montreal, Banff",
+    description:
+      "Combinação de natureza, cidades organizadas e ritmo mais tranquilo, muito procurado por viajantes maduros.",
+    examples:
+      "Toronto, Vancouver, Montreal, Quebec City, Niagara Falls, Banff National Park, Lake Louise, Jasper National Park, Vancouver Island, Whistler, Ottawa, Prince Edward Island, Churchill",
   },
   {
     icon: Umbrella,
     title: "Caribe",
-    description: "Viagens focadas em descanso premium, celebrações e experiências de conforto.",
-    examples: "Curaçao, St.Barths, Bahamas",
+    description:
+      "Viagens focadas em descanso premium, celebrações e experiências de conforto.",
+    examples:
+      "Aruba, Turks and Caicos, Bahamas, Saint Lucia, Antígua e Barbuda, Barbados, Punta Cana, Cancún, Riviera Maya, Anguilla, Saint Barthélemy, Ilhas Cayman",
   },
 ];
 
@@ -45,12 +53,18 @@ const Destinations = () => {
         >
           <p className="label-elegant text-primary mb-4">Destinos</p>
           <h2 className="heading-section text-foreground mb-6">
-            Destinos com os quais trabalho com mais profundidade
+            Destinos que concentram a maior parte dos projetos
           </h2>
           <p className="body-large text-muted-foreground max-w-3xl mx-auto">
             Minha atuação é focada em destinos que oferecem boa infraestrutura turística, 
             conforto, segurança, diversidade cultural e experiências compatíveis com um 
             planejamento bem estruturado.
+          </p>
+          <p className="body-large text-muted-foreground max-w-3xl mx-auto mt-6">
+            Esses são os destinos mais procurados pelo meu público hoje, onde concentro repertório, 
+            referências e atualizações constantes. Cada projeto, porém, começa sempre da mesma forma: 
+            entendendo o perfil, os objetivos e o tipo de experiência que a pessoa deseja viver — 
+            independentemente do destino.
           </p>
         </motion.div>
 
@@ -89,7 +103,7 @@ const Destinations = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-muted-foreground mt-12 text-sm"
         >
-          Cada roteiro é pensado para atender a sua expectativa.
+          Cada projeto começa pelo seu perfil, objetivos e experiência desejada.
         </motion.p>
       </div>
     </section>
