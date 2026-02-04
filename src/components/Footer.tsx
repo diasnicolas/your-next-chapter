@@ -26,8 +26,8 @@ const Footer = () => {
         {/* Bottom row: left copyright + CNPJ, center developed credit, right social icons */}
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4">
           <div className="text-left space-y-1">
-            <p className="text-sm text-muted-foreground">© {currentYear} Todos os direitos reservados</p>
-            <p className="text-xs text-muted-foreground/70">CNPJ: 59.578.284/0001-40</p>
+            <p className="text-sm text-muted-foreground">© {currentYear} Larissa Kassner | Travel Designer</p>
+            <p className="text-xs text-muted-foreground/70">CNPJ 59.578.284/0001-40</p>
           </div>
 
           <div className="text-center">
@@ -58,7 +58,7 @@ const Footer = () => {
             >
               <Instagram className="w-5 h-5" />
             </a>
-            <a
+            {/* <a
               href={LINKS.googleBusiness}
               target="_blank"
               rel="noopener noreferrer"
@@ -67,14 +67,16 @@ const Footer = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
                 viewBox="0 0 24 24"
                 className="w-5 h-5"
+                aria-hidden="true"
               >
-                <path d="M21.35 11.1h-9.9v2.7h5.7c-.3 1.8-1.8 3.6-5.7 3.6-3.3 0-6-2.7-6-6s2.7-6 6-6c1.5 0 2.7.6 3.6 1.5l2.1-2.1C15.9 2.7 14.1 2 12 2 6.5 2 2 6.5 2 12s4.5 10 10 10c5.1 0 9.3-3.6 9.3-10 0-.6-.1-1.2-.2-1.9z" />
-                <path d="M3.15 7.5l2.4 1.8c.6-1.5 1.8-2.7 3.3-3.3L6.45 3.6c-1.2 1.2-2.1 2.7-3.3 3.9zM12 4.8c1.2 0 2.1.3 3 .9l2.1-2.1C15.9 2.7 14.1 2 12 2c-2.7 0-5.1 1.2-6.6 3.3l2.4 1.8c.6-1.5 1.8-2.7 3.3-3.3zM12 19.2c2.1 0 3.9-.6 5.4-1.8l-2.4-1.8c-.9.6-1.8.9-3 .9-2.1 0-3.9-1.5-4.5-3.6l-2.4 1.8c1.2 2.1 3.6 3.6 6.6 3.6z" />
+                <path
+                  fill="currentColor"
+                  d="M12 10.5v3h5.2c-.2 1.5-1.5 3.5-5.2 3.5-3.1 0-5.6-2.6-5.6-6s2.5-6 5.6-6c1.7 0 2.9.7 3.6 1.4l2.4-2.3C16.5 2.6 14.5 1.8 12 1.8 6.9 1.8 2.8 5.9 2.8 11s4.1 9.2 9.2 9.2c5.3 0 8.8-3.7 8.8-8.9 0-.6-.1-1.1-.2-1.6H12z"
+                />
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

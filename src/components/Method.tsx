@@ -163,16 +163,6 @@ const Method = () => {
                     dangerouslySetInnerHTML={{ __html: step.conclusion }}
                   />
 
-                  {step.number === "04" && (
-                    <p className="mt-6 text-foreground leading-relaxed font-medium text-center">
-                      O objetivo é garantir clareza, tranquilidade e segurança,
-                      <br />
-                      para que você possa viajar com confiança
-                      <br />
-                      e aproveitar a experiência sem incertezas ao longo do caminho.
-                    </p>
-                  )}
-
                   {/* First step highlight */}
                   {index === 0 && (
                     <p className="mt-5 text-sm text-primary font-medium flex items-center gap-2">
@@ -181,6 +171,16 @@ const Method = () => {
                   )}
                 </div>
               </div>
+
+              {step.number === "04" && (
+                <p className="mt-6 text-foreground leading-relaxed font-medium text-center">
+                  O objetivo é garantir clareza, tranquilidade e segurança,
+                  <br />
+                  para que você possa viajar com confiança
+                  <br />
+                  e aproveitar a experiência sem incertezas ao longo do caminho.
+                </p>
+              )}
             </motion.div>
           ))}
         </div>
