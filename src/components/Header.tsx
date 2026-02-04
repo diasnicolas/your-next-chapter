@@ -7,7 +7,7 @@ import logo from "@/assets/logotipo.png";
 const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Como Funciona", href: "#metodo" },
-  { label: "Primeiro passo", href: "#diagnostico" },
+  { label: "Primeiro Passo", href: "#diagnostico" },
   { label: "Destinos", href: "#destinos" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Agendar reunião", href: "#contato" }

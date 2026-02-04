@@ -66,7 +66,7 @@ const steps = [
       "Assistência durante a viagem, em formato ampliado, para clientes que desejam contar com acompanhamento mais próximo ao longo do percurso.",
     ],
     conclusion:
-      "Após a definição do roteiro final, o cliente pode optar por contratar serviços complementares, de acordo com suas necessidades, preferências e nível de suporte desejado.<br/>Esses serviços são oferecidos à parte, sempre respeitando o escopo do projeto e o estilo de viagem definido nas etapas anteriores.<br/>A contratação desses serviços é uma <b>decisão exclusiva do cliente</b>, de acordo com o nível de suporte que considera ideal para a sua viagem.",
+      "A contratação desses serviços é uma <b>decisão exclusiva do cliente</b>, de acordo com o nível de suporte que considera ideal para a sua viagem.",
   },
 ];
 

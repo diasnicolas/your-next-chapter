@@ -10,7 +10,7 @@ const regions = [
     description:
       "Ideal para quem busca cultura, gastronomia, cidades históricas e deslocamentos bem conectados.",
     examples:
-      "Itália, Suíça, Portugal, França, Espanha, Holanda, Alemanha, Irlanda, Áustria, Bélgica, Reino Unido, Luxemburgo, Mônaco",
+      "Itália, Suíça, Portugal, França, Espanha, Holanda, Alemanha, Irlanda, Áustria, Bélgica, Reino Unido, Luxemburgo, Mônaco, Liechtenstein",
   },
   {
     icon: Building,
@@ -103,7 +103,7 @@ const Destinations = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-muted-foreground mt-12 text-sm"
         >
-          Cada projeto começa pelo seu perfil, objetivos e experiência desejada.
+          Cada roteiro é pensado para atender a sua expectativa.
         </motion.p>
       </div>
     </section>
