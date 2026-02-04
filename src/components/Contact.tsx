@@ -52,7 +52,7 @@ const Contact = () => {
             o próximo passo é simples.
           </p>
           <p className="text-primary-foreground/80 mb-10">
-            Agende sua reunião de diagnóstico e vamos entender, juntos, se esse 
+            Agende sua reunião e vamos entender, juntos, se esse 
             método faz sentido para você.
           </p>
 
@@ -109,7 +109,7 @@ const Contact = () => {
                   className="flex items-center gap-3 w-full justify-center"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>Agendar reunião de diagnóstico</span>
+                  <span>Agendar reunião</span>
                 </Button>
               </div>
             </div>

@@ -29,7 +29,7 @@ const Positioning = () => {
             <p className="body-large">
               Sou Larissa Kassner, travel designer especializada em criar roteiros 
               internacionais totalmente personalizados para pessoas que valorizam 
-              planejamento profissional, conforto e e clareza em cada decisão da viagem.
+              planejamento profissional, conforto e clareza em cada decisão da viagem.
             </p>
             
             <p className="body-regular">

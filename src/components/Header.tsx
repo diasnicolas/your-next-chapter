@@ -7,10 +7,10 @@ import logo from "@/assets/logotipo.png";
 const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Como Funciona", href: "#metodo" },
-  { label: "Diagnóstico", href: "#diagnostico" },
+  { label: "Primeiro passo", href: "#diagnostico" },
   { label: "Destinos", href: "#destinos" },
   { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Agendar Diagnóstico", href: "#contato" }
+  { label: "Agendar reunião", href: "#contato" }
 ];
 
 const Header = () => {

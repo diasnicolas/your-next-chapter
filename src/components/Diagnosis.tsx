@@ -77,7 +77,7 @@ const Diagnosis = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="hidden text-center text-muted-foreground mb-12 md:block"
           >
-            Esse encontro evita propostas genéricas, expectativas desalinhadas e decisões cansativas ao longo do processo, trazendo clareza desde o início.
+            Esse encontro evita propostas genéricas e decisões cansativas ao longo do processo, trazendo clareza desde o início.
           </motion.p>
 
           {/* Benefits Grid */}

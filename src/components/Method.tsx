@@ -66,7 +66,7 @@ const steps = [
       "Assistência durante a viagem, em formato ampliado, para clientes que desejam contar com acompanhamento mais próximo ao longo do percurso.",
     ],
     conclusion:
-      "Após a definição do roteiro final, o cliente pode optar por contratar serviços complementares, de acordo com suas necessidades, preferências e nível de suporte desejado.<br/>Esses serviços são oferecidos à parte, sempre respeitando o escopo do projeto e o estilo de viagem definido nas etapas anteriores.<br/>A contratação desses serviços é uma decisão exclusiva do cliente, de acordo com o nível de suporte que considera ideal para a sua viagem.",
+      "Após a definição do roteiro final, o cliente pode optar por contratar serviços complementares, de acordo com suas necessidades, preferências e nível de suporte desejado.<br/>Esses serviços são oferecidos à parte, sempre respeitando o escopo do projeto e o estilo de viagem definido nas etapas anteriores.<br/>A contratação desses serviços é uma <b>decisão exclusiva do cliente</b>, de acordo com o nível de suporte que considera ideal para a sua viagem.",
   },
 ];
 
@@ -163,6 +163,16 @@ const Method = () => {
                     dangerouslySetInnerHTML={{ __html: step.conclusion }}
                   />
 
+                  {step.number === "04" && (
+                    <p className="mt-6 text-foreground leading-relaxed font-medium text-center">
+                      O objetivo é garantir clareza, tranquilidade e segurança,
+                      <br />
+                      para que você possa viajar com confiança
+                      <br />
+                      e aproveitar a experiência sem incertezas ao longo do caminho.
+                    </p>
+                  )}
+
                   {/* First step highlight */}
                   {index === 0 && (
                     <p className="mt-5 text-sm text-primary font-medium flex items-center gap-2">
@@ -175,21 +185,6 @@ const Method = () => {
           ))}
         </div>
 
-        {/* Final message */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="max-w-3xl mx-auto mt-16"
-        >
-          <div className="bg-gradient-to-r from-rosa-soft/40 via-rosa-soft/60 to-rosa-soft/40 rounded-2xl p-8 border border-primary/10 text-center">
-            <p className="text-foreground leading-relaxed font-medium">
-              O objetivo é garantir clareza, tranquilidade e segurança,
-              <br />
-              para que você possa viajar com confiança e aproveitar a experiência sem incertezas ao longo do caminho.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
