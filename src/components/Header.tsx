@@ -94,7 +94,7 @@ const Header = () => {
             className="fixed inset-0 z-40 bg-background pt-24 md:hidden"
           >
             <nav className="container flex flex-col items-center gap-8 py-12">
-              {navItems.filter(item => item.label !== "Agendar Diagnóstico").map((item) => (
+              {navItems.filter(item => item.label !== "Agendar reunião").map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
